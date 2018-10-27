@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {fetchData} from './apolloClient';
+
 
 class App extends Component {
+  componentDidMount() {
+    fetchData();
+  }
+
   render() {
     return (
       <div className="App">
